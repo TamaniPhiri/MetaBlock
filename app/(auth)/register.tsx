@@ -114,7 +114,9 @@ const Register = () => {
             </TouchableOpacity>
           </Link>
           <Link href={"/(auth)/"} asChild style={{ marginVertical: 24 }}>
-            <Text style={{ color: "white" }}>Already have an account?</Text>
+            <Text style={{ color: "white" }}>
+              Already have an account? Login
+            </Text>
           </Link>
         </ScrollView>
       </KeyboardAvoidingView>
