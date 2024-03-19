@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
-import { FontAwesome } from "@expo/vector-icons"; // Import for the icon
+import { FontAwesome } from "@expo/vector-icons";
 
 const Profile = () => {
   return (
@@ -7,7 +7,7 @@ const Profile = () => {
       {/* Profile Picture */}
       <View style={styles.profilePictureContainer}>
         <Image
-          source={{ uri: "https://via.placeholder.com/150" }}
+          source={{ uri: "https://i.ibb.co/Pm54XZy/IMG-0039.jpg" }}
           style={styles.profilePicture}
         />
       </View>
