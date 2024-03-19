@@ -29,7 +29,7 @@ const Home = () => {
         </TouchableOpacity>
       </View>
       <PagerView
-        style={{ width: "100%", height: 150 }}
+        style={{ width: "100%", height: 170 }}
         overScrollMode={"always"}
         overdrag
         initialPage={0}
@@ -87,6 +87,41 @@ const Home = () => {
                 + 5.57%
               </Text>
             </View>
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+              marginTop: 12,
+              gap: 6,
+            }}
+          >
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                alignItems: "center",
+                padding: 6,
+                borderWidth: 1,
+                borderRadius: 12,
+                borderColor: "gray",
+              }}
+            >
+              <Text style={{ fontFamily: "sans" }}>Send</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                alignItems: "center",
+                padding: 6,
+                borderWidth: 1,
+                borderRadius: 12,
+                borderColor: "gray",
+              }}
+            >
+              <Text style={{ fontFamily: "sans" }}>Receive</Text>
+            </TouchableOpacity>
           </View>
         </View>
 
@@ -154,6 +189,43 @@ const Home = () => {
               </Text>
             </View>
           </View>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+              marginTop: 12,
+              gap: 6,
+            }}
+          >
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                alignItems: "center",
+                padding: 6,
+                borderWidth: 1,
+                borderRadius: 12,
+                borderColor: "white",
+              }}
+            >
+              <Text style={{ fontFamily: "sans", color: "white" }}>Send</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                alignItems: "center",
+                padding: 6,
+                borderWidth: 1,
+                borderRadius: 12,
+                borderColor: "white",
+              }}
+            >
+              <Text style={{ fontFamily: "sans", color: "white" }}>
+                Receive
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
         <View
@@ -209,6 +281,41 @@ const Home = () => {
                 + 3.57%
               </Text>
             </View>
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+              marginTop: 12,
+              gap: 6,
+            }}
+          >
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                alignItems: "center",
+                padding: 6,
+                borderWidth: 1,
+                borderRadius: 12,
+                borderColor: "gray",
+              }}
+            >
+              <Text style={{ fontFamily: "sans" }}>Send</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{
+                flex: 1,
+                alignItems: "center",
+                padding: 6,
+                borderWidth: 1,
+                borderRadius: 12,
+                borderColor: "gray",
+              }}
+            >
+              <Text style={{ fontFamily: "sans" }}>Receive</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </PagerView>
