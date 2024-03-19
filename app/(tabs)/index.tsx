@@ -44,6 +44,14 @@ const Home = () => {
             <Text style={{ fontFamily: "sans" }}>Total Wallet Balance</Text>
             <Text style={{ fontFamily: "sans", fontWeight: "700" }}>ZMW</Text>
           </View>
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <View></View>
+            <View style={{ backgroundColor: "#86efac" }}>
+              <Text>+ 3.57%</Text>
+            </View>
+          </View>
         </View>
         <View
           style={{

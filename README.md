@@ -1,4 +1,4 @@
-###Meta Block##
+# Meta Block #
 
 Meta Block is a multipurpose application that leverages blockchain technology to combat counterfeit products and certificates while facilitating the buying, selling, and transfer of cryptocurrency within the app.
 Abstract
@@ -7,8 +7,8 @@ Abstract
 -----------------------------------------------------------------------------------------------
 
 Meta Block utilizes blockchain to tokenize products and documents, enabling secure verification through embedded tokens within QR codes. The app digitalizes physical certificates, enhancing accessibility and reducing the risk of forgery. Advanced encryption techniques safeguard sensitive user information, ensuring the integrity of digital certificates and enhancing market security.
-
-#Objectives of the Project
+ 
+# Objectives of the Project
 
     - Prevent duplicates of certificates, drugs, and artwork.
     - Eliminate counterfeit products from reaching consumers.
@@ -17,7 +17,7 @@ Meta Block utilizes blockchain to tokenize products and documents, enabling secu
     - Facilitate cryptocurrency transactions.
 
 
-##Benefits of the App##
+## Benefits of the App##
 
     - Security: Employing advanced encryption techniques ensures market security and protects sensitive user data.
     - Environmental Sustainability: By reducing reliance on physical documents, the app contributes to environmental sustainability.
@@ -27,7 +27,7 @@ Meta Block utilizes blockchain to tokenize products and documents, enabling secu
     - Trust and Transparency: Verification of products and certificates fosters consumer trust and market transparency.
     - Convenience: Direct verification from user devices brings the market closer to consumers.
 
-##Database Design##
+## Database Design##
 
 To support the functionalities of Meta Block, a database schema is essential. The main entities and their attributes include:
 
@@ -46,7 +46,7 @@ Objectives of the Project
     Enhance market accessibility and security.
     Facilitate cryptocurrency transactions.
 
-Benefits of the App
+# Benefits of the App
 
     Security: Employing advanced encryption techniques ensures market security and protects sensitive user data.
     Environmental Sustainability: By reducing reliance on physical documents, the app contributes to environmental sustainability.
@@ -60,14 +60,14 @@ Database Design
 
 To support the functionalities of Meta Block, a database schema is essential. The main entities and their attributes include:
 
-##Users:
+## Users:
     UserID (Primary Key)
     Username
     Email
     Password
     Other relevant user information
 
-##Products:
+## Products:
     - ProductID (Primary Key)
     - ProductName
     - Description
@@ -75,7 +75,7 @@ To support the functionalities of Meta Block, a database schema is essential. Th
     - Date of manufacture
     - Other relevant product information
 
-##Certificates:
+## Certificates:
     - CertificateID (Primary Key)
     - CertificateType (e.g., Artwork, Property Papers, Medicines)
     - Issuer
@@ -83,7 +83,7 @@ To support the functionalities of Meta Block, a database schema is essential. Th
     - Expiry Date (if applicable)
     - Other relevant certificate information
 
-##Transactions:
+## Transactions:
     - TransactionID (Primary Key)
     -UserID (Foreign Key referencing Users.UserID)
     -ProductID (Foreign Key referencing Products.ProductID)
