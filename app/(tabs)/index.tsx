@@ -63,9 +63,9 @@ const Home = () => {
           >
             <View>
               <Text style={{ fontFamily: "sans", fontSize: 32 }}>
-                K 34.9896
+                K 57.9896
               </Text>
-              <Text style={{ fontFamily: "sans" }}>7.7545BTC</Text>
+              <Text style={{ fontFamily: "sans" }}>9.7545BTC</Text>
             </View>
             <View>
               <Text
@@ -75,7 +75,7 @@ const Home = () => {
                   borderRadius: 12,
                 }}
               >
-                + 3.57%
+                + 5.57%
               </Text>
             </View>
           </View>
@@ -119,9 +119,9 @@ const Home = () => {
           >
             <View>
               <Text style={{ fontFamily: "sans", fontSize: 32 }}>
-                K 34.9896
+                K 1.9896
               </Text>
-              <Text style={{ fontFamily: "sans" }}>7.7545BTC</Text>
+              <Text style={{ fontFamily: "sans" }}>10.7545BTC</Text>
             </View>
             <View>
               <Text
@@ -131,12 +131,12 @@ const Home = () => {
                   borderRadius: 12,
                 }}
               >
-                + 3.57%
+                + 1.57%
               </Text>
             </View>
           </View>
         </View>
-        
+
         <View
           style={{
             padding: 12,
