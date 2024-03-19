@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
 import {
   Keyboard,
@@ -13,6 +13,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Login = () => {
+  const router = useRouter();
   const scrollRef = useRef<ScrollView | null>(null);
 
   const keyBoardDidShow = () => {
@@ -95,6 +96,7 @@ const Login = () => {
           </View>
           <Link asChild href={"/(tabs)/"} style={{ width: "100%" }}>
             <TouchableOpacity
+              onPress={() => router.push("/(tabs)/")}
               style={{
                 backgroundColor: "yellow",
                 width: "100%",
