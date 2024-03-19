@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <SafeAreaView style={{ flex: 1, paddingHorizontal: 12 }}>
       <View>
-        <Text>hello</Text>
+        <Text style={{ fontFamily: "sans" }}>hello</Text>
       </View>
       <PagerView
         style={{ width: "100%", height: 150 }}
@@ -37,12 +37,12 @@ const Home = () => {
               style={{
                 backgroundColor: "black",
                 width: "auto",
-                padding: 12,
+                padding: 6,
                 borderRadius: 50,
               }}
             />
-            <Text>Total Wallet Balance</Text>
-            <Text>ZMW</Text>
+            <Text style={{ fontFamily: "sans" }}>Total Wallet Balance</Text>
+            <Text style={{ fontFamily: "sans", fontWeight: "700" }}>ZMW</Text>
           </View>
         </View>
         <View
