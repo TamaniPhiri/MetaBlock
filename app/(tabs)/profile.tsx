@@ -4,7 +4,6 @@ import { FontAwesome } from "@expo/vector-icons";
 const Profile = () => {
   return (
     <View style={styles.container}>
-      {/* Profile Picture */}
       <View style={styles.profilePictureContainer}>
         <Image
           source={{ uri: "https://i.ibb.co/Pm54XZy/IMG-0039.jpg" }}
@@ -12,7 +11,6 @@ const Profile = () => {
         />
       </View>
 
-      {/* User Information */}
       <View style={styles.userInfoContainer}>
         <Text style={styles.username}>Chola Kuboko</Text>
         <Text style={styles.bio}>Software Engineer @MetaBlock Inc</Text>
