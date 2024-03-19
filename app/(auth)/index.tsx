@@ -67,33 +67,44 @@ const Login = () => {
           <Text style={{ fontFamily: "sans", color: "#d3d3d3" }}>
             Enter your information below
           </Text>
-          <View style={{ width: "100%" }}>
-            <TextInput
-              style={{
-                borderColor: "yellow",
-                borderWidth: 1,
-                width: "100%",
-                padding: 12,
-              }}
-              placeholderTextColor={"#d3d3d3"}
-              placeholder="Email"
-            />
-          </View>
-          <View style={{ width: "100%" }}>
-            <TextInput
-              style={{
-                borderColor: "yellow",
-                borderWidth: 1,
-                width: "100%",
-                padding: 12,
-              }}
-              placeholder="Password"
-              placeholderTextColor={"#d3d3d3"}
-            />
+          <View style={{ gap: 12, width: "100%", marginVertical: 12 }}>
+            <View style={{ width: "100%" }}>
+              <TextInput
+                style={{
+                  borderColor: "yellow",
+                  borderWidth: 1,
+                  width: "100%",
+                  padding: 12,
+                }}
+                placeholderTextColor={"#d3d3d3"}
+                placeholder="Email"
+              />
+            </View>
+            <View style={{ width: "100%" }}>
+              <TextInput
+                style={{
+                  borderColor: "yellow",
+                  borderWidth: 1,
+                  width: "100%",
+                  padding: 12,
+                }}
+                placeholder="Password"
+                placeholderTextColor={"#d3d3d3"}
+              />
+            </View>
           </View>
           <Link asChild href={"/(tabs)/"}>
             <TouchableOpacity>
-              <Text style={{ color: "white", fontFamily: "sans" }}>Login</Text>
+              <Text
+                style={{
+                  color: "white",
+                  fontFamily: "sans",
+                  backgroundColor: "yellow",
+                  width: "100%",
+                }}
+              >
+                Login
+              </Text>
             </TouchableOpacity>
           </Link>
         </ScrollView>
