@@ -1,8 +1,6 @@
 import { Tabs } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
 export default function TabLayout() {
   return (
     <Tabs
@@ -39,6 +37,18 @@ export default function TabLayout() {
           title: "Scan",
           tabBarIcon: ({ color, size }) => (
             <Feather name="compass" size={size} color={color} />
+          ),
+          tabBarLabelStyle: {
+            fontFamily: "sans",
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <Feather name="user" size={size} color={color} />
           ),
           tabBarLabelStyle: {
             fontFamily: "sans",
