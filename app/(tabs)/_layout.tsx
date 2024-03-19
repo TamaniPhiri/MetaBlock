@@ -1,6 +1,7 @@
 import { Tabs } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 export default function TabLayout() {
   return (
     <Tabs
@@ -36,7 +37,7 @@ export default function TabLayout() {
         options={{
           title: "Scan",
           tabBarIcon: ({ color, size }) => (
-            <Feather name="compass" size={size} color={color} />
+            <FontAwesome name="qrcode" size={size} color={color} />
           ),
           tabBarLabelStyle: {
             fontFamily: "sans",
