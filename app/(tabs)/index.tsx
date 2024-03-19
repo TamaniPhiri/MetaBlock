@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, paddingHorizontal: 12 }}>
       <PagerView
         style={{ width: "100%", height: 200 }}
         overScrollMode={"always"}
@@ -15,7 +15,7 @@ const Home = () => {
           style={{
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(255, 253, 175, 0.8)",
+            backgroundColor: "yellow",
           }}
           key="1"
         >
@@ -26,7 +26,7 @@ const Home = () => {
           style={{
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "yellow",
+            backgroundColor: "gray",
           }}
           key="2"
         >
