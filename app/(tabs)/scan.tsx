@@ -1,6 +1,7 @@
 import { View, Text, Alert, StyleSheet, ActivityIndicator } from "react-native";
 import React, { useEffect, useState } from "react";
 import { BarCodeScanner } from "expo-barcode-scanner";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Scan = () => {
   const [hasPermission, setHasPermission] = useState<boolean | null>(null);
@@ -53,7 +54,7 @@ const Scan = () => {
         </View>
       );
     }
-  return <View>{renderCamera()}</View>;
+  return <SafeAreaView>{renderCamera()}</SafeAreaView>;
 };
 
 export default Scan;
