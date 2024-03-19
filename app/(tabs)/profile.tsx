@@ -1,9 +1,10 @@
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Profile = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.profilePictureContainer}>
         <Image
           source={{ uri: "https://i.ibb.co/Pm54XZy/IMG-0039.jpg" }}
@@ -17,21 +18,21 @@ const Profile = () => {
       </View>
       <View style={styles.userInfoItems}>
         <TouchableOpacity style={styles.iconContainer}>
-          <FontAwesome name="envelope" size={20} color="black" />
+          <FontAwesome name="envelope" size={20} color="white" />
         </TouchableOpacity>
         <Text style={styles.userInfoText}>cholahkuboko@gmail.com</Text>
         <TouchableOpacity style={styles.iconContainer}>
-          <FontAwesome name="edit" size={20} color="black" />
+          <FontAwesome name="edit" size={20} color="white" />
         </TouchableOpacity>
       </View>
 
       <View style={styles.userInfoItems2}>
         <TouchableOpacity style={styles.iconContainer}>
-          <FontAwesome name="phone" size={20} color="black" />
+          <FontAwesome name="phone" size={20} color="white" />
         </TouchableOpacity>
         <Text style={styles.userInfoText}>0979054417</Text>
         <TouchableOpacity style={styles.iconContainer}>
-          <FontAwesome name="edit" size={20} color="black" />
+          <FontAwesome name="edit" size={20} color="white" />
         </TouchableOpacity>
       </View>
 
@@ -61,14 +62,13 @@ const Profile = () => {
           <Text style={{ color: "gray", marginTop: 4 }}>162cm</Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f5f5f5",
     padding: 30,
   },
   profilePictureContainer: {
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
   username: {
     fontSize: 20,
     fontWeight: "bold",
+    color:"white"
   },
   bio: {
     fontSize: 16,
@@ -118,6 +119,7 @@ const styles = StyleSheet.create({
   },
   userInfoText: {
     flex: 1,
+    color:"white"
   },
   balanceContainer: {
     flexDirection: "row",
@@ -128,9 +130,11 @@ const styles = StyleSheet.create({
   },
   balanceText: {
     fontWeight: "bold",
+    color:"yellow"
   },
   balanceAmount: {
     marginLeft: 5,
+    color:"white"
   },
 });
 
