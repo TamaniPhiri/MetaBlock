@@ -113,6 +113,9 @@ const Login = () => {
               </Text>
             </TouchableOpacity>
           </Link>
+          <Link href={"/(auth)/"} asChild>
+            Don't have an account? Register
+          </Link>
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
