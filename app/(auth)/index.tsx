@@ -93,7 +93,7 @@ const Login = () => {
               />
             </View>
           </View>
-          <Link asChild href={"/(tabs)/"}>
+          <Link asChild href={"/(tabs)/"} style={{ width: "100%" }}>
             <TouchableOpacity>
               <Text
                 style={{
