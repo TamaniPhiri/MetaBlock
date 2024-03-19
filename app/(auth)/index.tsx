@@ -114,7 +114,9 @@ const Login = () => {
             </TouchableOpacity>
           </Link>
           <Link href={"/(auth)/"} asChild>
-            Don't have an account? Register
+            <Text style={{ color: "white" }}>
+              Don't have an account? Register
+            </Text>
           </Link>
         </ScrollView>
       </KeyboardAvoidingView>
