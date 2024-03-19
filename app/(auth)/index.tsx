@@ -62,7 +62,7 @@ const Login = () => {
           bounces={false}
         >
           <Text style={{ fontFamily: "sans", fontSize: 28, color: "yellow" }}>
-            Let's Get You Signed In!
+            Welcome Back!
           </Text>
           <Text style={{ fontFamily: "sans", color: "#d3d3d3" }}>
             Enter your information below
@@ -113,7 +113,11 @@ const Login = () => {
               </Text>
             </TouchableOpacity>
           </Link>
-          <Link href={"/(auth)/"} asChild style={{ marginVertical: 24 }}>
+          <Link
+            href={"/(auth)/register"}
+            asChild
+            style={{ marginVertical: 24 }}
+          >
             <Text style={{ color: "white" }}>
               Don't have an account? Register
             </Text>
