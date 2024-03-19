@@ -1,57 +1,88 @@
-import React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
-
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
-import { useClientOnlyValue } from '@/components/useClientOnlyValue';
-
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
-
+import { Tabs } from "expo-router";
+import { AntDesign } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
-      }}>
+        headerShown: false,
+        tabBarActiveTintColor: "yellow",
+        tabBarHideOnKeyboard: true,
+        tabBarStyle: {
+          position: "absolute",
+          bottom: 6,
+          borderRadius: 79,
+          paddingBottom: 4,
+        },
+        tabBarLabelStyle: {
+          margin: 0,
+        },
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
+          title: "Home",
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="home" size={size} color={color} />
           ),
+          tabBarLabelStyle: {
+            fontFamily: "sans",
+          },
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="discover"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: "Discover",
+          tabBarIcon: ({ color, size }) => (
+            <Feather name="compass" size={size} color={color} />
+          ),
+          tabBarLabelStyle: {
+            fontFamily: "sans",
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="favorites"
+        options={{
+          title: "Favorites",
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="hearto" size={size} color={color} />
+          ),
+          tabBarLabelStyle: {
+            fontFamily: "sans",
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="messages"
+        options={{
+          title: "Messages",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons
+              name="message-minus-outline"
+              size={size}
+              color={color}
+            />
+          ),
+          tabBarLabelStyle: {
+            fontFamily: "sans",
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="user" size={size} color={color} />
+          ),
+          tabBarLabelStyle: {
+            fontFamily: "sans",
+          },
         }}
       />
     </Tabs>
