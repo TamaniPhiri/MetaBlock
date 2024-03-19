@@ -13,7 +13,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Register = () => {
-  const router=useRouter();
+  const router = useRouter();
   const scrollRef = useRef<ScrollView | null>(null);
 
   const keyBoardDidShow = () => {
@@ -72,8 +72,8 @@ const Register = () => {
             <View style={{ width: "100%" }}>
               <TextInput
                 style={{
-                  borderColor: "yellow",
-                  borderWidth: 1,
+                  borderColor: "rgba(255, 253, 175, 0.8)",
+                  borderWidth: 0.5,
                   width: "100%",
                   padding: 12,
                 }}
@@ -84,8 +84,8 @@ const Register = () => {
             <View style={{ width: "100%" }}>
               <TextInput
                 style={{
-                  borderColor: "yellow",
-                  borderWidth: 1,
+                  borderColor: "rgba(255, 253, 175, 0.8)",
+                  borderWidth: 0.5,
                   width: "100%",
                   padding: 12,
                 }}
