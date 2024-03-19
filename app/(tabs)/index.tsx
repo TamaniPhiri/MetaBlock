@@ -107,8 +107,8 @@ const Home = () => {
                 borderRadius: 50,
               }}
             />
-            <Text style={{ fontFamily: "sans" }}>Total Wallet Balance</Text>
-            <Text style={{ fontFamily: "sans", fontWeight: "700" }}>ZMW</Text>
+            <Text style={{ fontFamily: "sans" ,color:"white"}}>Total Wallet Balance</Text>
+            <Text style={{ fontFamily: "sans", fontWeight: "700",color:"white" }}>ZMW</Text>
           </View>
           <View
             style={{
@@ -118,10 +118,10 @@ const Home = () => {
             }}
           >
             <View>
-              <Text style={{ fontFamily: "sans", fontSize: 32 }}>
+              <Text style={{ fontFamily: "sans", fontSize: 32,color:"white" }}>
                 K 1.9896
               </Text>
-              <Text style={{ fontFamily: "sans" }}>10.7545BTC</Text>
+              <Text style={{ fontFamily: "sans" ,color:"white"}}>10.7545BTC</Text>
             </View>
             <View>
               <Text
