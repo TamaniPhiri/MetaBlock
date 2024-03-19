@@ -1,12 +1,19 @@
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import PagerView from "react-native-pager-view";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Entypo } from "@expo/vector-icons";
+import { Entypo, Ionicons } from "@expo/vector-icons";
 
 const Home = () => {
   return (
     <SafeAreaView style={{ flex: 1, paddingHorizontal: 12 }}>
-      <View style={{ paddingVertical: 24 }}>
+      <View
+        style={{
+          paddingVertical: 24,
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
         <Text
           style={{
             fontFamily: "sans",
@@ -17,6 +24,9 @@ const Home = () => {
         >
           Hello Tamani!
         </Text>
+        <TouchableOpacity>
+          <Ionicons name="notifications" size={24} color={"white"} />
+        </TouchableOpacity>
       </View>
       <PagerView
         style={{ width: "100%", height: 150 }}
@@ -24,7 +34,6 @@ const Home = () => {
         overdrag
         initialPage={0}
       >
-
         <View
           style={{
             backgroundColor: "yellow",
@@ -107,8 +116,14 @@ const Home = () => {
                 borderRadius: 50,
               }}
             />
-            <Text style={{ fontFamily: "sans" ,color:"white"}}>Total Wallet Balance</Text>
-            <Text style={{ fontFamily: "sans", fontWeight: "700",color:"white" }}>ZMW</Text>
+            <Text style={{ fontFamily: "sans", color: "white" }}>
+              Total Wallet Balance
+            </Text>
+            <Text
+              style={{ fontFamily: "sans", fontWeight: "700", color: "white" }}
+            >
+              ZMW
+            </Text>
           </View>
           <View
             style={{
@@ -118,10 +133,14 @@ const Home = () => {
             }}
           >
             <View>
-              <Text style={{ fontFamily: "sans", fontSize: 32,color:"white" }}>
+              <Text
+                style={{ fontFamily: "sans", fontSize: 32, color: "white" }}
+              >
                 K 1.9896
               </Text>
-              <Text style={{ fontFamily: "sans" ,color:"white"}}>10.7545BTC</Text>
+              <Text style={{ fontFamily: "sans", color: "white" }}>
+                10.7545BTC
+              </Text>
             </View>
             <View>
               <Text
