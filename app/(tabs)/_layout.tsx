@@ -34,51 +34,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="discover"
+        name="scan"
         options={{
-          title: "Discover",
+          title: "Scan",
           tabBarIcon: ({ color, size }) => (
             <Feather name="compass" size={size} color={color} />
-          ),
-          tabBarLabelStyle: {
-            fontFamily: "sans",
-          },
-        }}
-      />
-      <Tabs.Screen
-        name="favorites"
-        options={{
-          title: "Favorites",
-          tabBarIcon: ({ color, size }) => (
-            <AntDesign name="hearto" size={size} color={color} />
-          ),
-          tabBarLabelStyle: {
-            fontFamily: "sans",
-          },
-        }}
-      />
-      <Tabs.Screen
-        name="messages"
-        options={{
-          title: "Messages",
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="message-minus-outline"
-              size={size}
-              color={color}
-            />
-          ),
-          tabBarLabelStyle: {
-            fontFamily: "sans",
-          },
-        }}
-      />
-      <Tabs.Screen
-        name="profile"
-        options={{
-          title: "Profile",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="user" size={size} color={color} />
           ),
           tabBarLabelStyle: {
             fontFamily: "sans",
