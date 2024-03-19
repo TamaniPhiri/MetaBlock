@@ -6,8 +6,17 @@ import { Entypo } from "@expo/vector-icons";
 const Home = () => {
   return (
     <SafeAreaView style={{ flex: 1, paddingHorizontal: 12 }}>
-      <View>
-        <Text style={{ fontFamily: "sans" }}>hello</Text>
+      <View style={{ paddingVertical: 24 }}>
+        <Text
+          style={{
+            fontFamily: "sans",
+            color: "white",
+            fontSize: 24,
+            fontWeight: "500",
+          }}
+        >
+          Hello Tamani!
+        </Text>
       </View>
       <PagerView
         style={{ width: "100%", height: 150 }}
@@ -15,6 +24,7 @@ const Home = () => {
         overdrag
         initialPage={0}
       >
+
         <View
           style={{
             backgroundColor: "yellow",
@@ -45,33 +55,142 @@ const Home = () => {
             <Text style={{ fontFamily: "sans", fontWeight: "700" }}>ZMW</Text>
           </View>
           <View
-            style={{ flexDirection: "row", justifyContent: "space-between" }}
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              marginTop: 12,
+            }}
           >
-            <View></View>
-            <View style={{ backgroundColor: "#86efac" }}>
-              <Text>+ 3.57%</Text>
+            <View>
+              <Text style={{ fontFamily: "sans", fontSize: 32 }}>
+                K 34.9896
+              </Text>
+              <Text style={{ fontFamily: "sans" }}>7.7545BTC</Text>
+            </View>
+            <View>
+              <Text
+                style={{
+                  backgroundColor: "#86efac",
+                  padding: 6,
+                  borderRadius: 12,
+                }}
+              >
+                + 3.57%
+              </Text>
             </View>
           </View>
         </View>
+
         <View
           style={{
-            justifyContent: "center",
-            alignItems: "center",
+            padding: 12,
+            borderRadius: 12,
             backgroundColor: "gray",
           }}
           key="2"
         >
-          <Text style={{ color: "white" }}>Second page</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Entypo
+              name="wallet"
+              size={24}
+              color="white"
+              style={{
+                backgroundColor: "black",
+                width: "auto",
+                padding: 6,
+                borderRadius: 50,
+              }}
+            />
+            <Text style={{ fontFamily: "sans" }}>Total Wallet Balance</Text>
+            <Text style={{ fontFamily: "sans", fontWeight: "700" }}>ZMW</Text>
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              marginTop: 12,
+            }}
+          >
+            <View>
+              <Text style={{ fontFamily: "sans", fontSize: 32 }}>
+                K 34.9896
+              </Text>
+              <Text style={{ fontFamily: "sans" }}>7.7545BTC</Text>
+            </View>
+            <View>
+              <Text
+                style={{
+                  backgroundColor: "#86efac",
+                  padding: 6,
+                  borderRadius: 12,
+                }}
+              >
+                + 3.57%
+              </Text>
+            </View>
+          </View>
         </View>
+        
         <View
           style={{
-            justifyContent: "center",
-            alignItems: "center",
+            padding: 12,
+            borderRadius: 12,
             backgroundColor: "white",
           }}
           key="3"
         >
-          <Text style={{ color: "white" }}>Third page</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Entypo
+              name="wallet"
+              size={24}
+              color="white"
+              style={{
+                backgroundColor: "black",
+                width: "auto",
+                padding: 6,
+                borderRadius: 50,
+              }}
+            />
+            <Text style={{ fontFamily: "sans" }}>Total Wallet Balance</Text>
+            <Text style={{ fontFamily: "sans", fontWeight: "700" }}>ZMW</Text>
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              marginTop: 12,
+            }}
+          >
+            <View>
+              <Text style={{ fontFamily: "sans", fontSize: 32 }}>
+                K 34.9896
+              </Text>
+              <Text style={{ fontFamily: "sans" }}>7.7545BTC</Text>
+            </View>
+            <View>
+              <Text
+                style={{
+                  backgroundColor: "#86efac",
+                  padding: 6,
+                  borderRadius: 12,
+                }}
+              >
+                + 3.57%
+              </Text>
+            </View>
+          </View>
         </View>
       </PagerView>
     </SafeAreaView>
