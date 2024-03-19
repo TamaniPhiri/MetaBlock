@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
 import {
   Keyboard,
@@ -13,6 +13,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const Login = () => {
+  const router = useRouter();
   const scrollRef = useRef<ScrollView | null>(null);
 
   const keyBoardDidShow = () => {
@@ -62,39 +63,66 @@ const Login = () => {
           bounces={false}
         >
           <Text style={{ fontFamily: "sans", fontSize: 28, color: "yellow" }}>
-            Let's Get You Signed In!
+            Welcome Back!
           </Text>
           <Text style={{ fontFamily: "sans", color: "#d3d3d3" }}>
             Enter your information below
           </Text>
-          <View style={{ width: "100%" }}>
-            <TextInput
-              style={{
-                borderColor: "yellow",
-                borderWidth: 1,
-                width: "100%",
-                padding: 12,
-              }}
-              placeholderTextColor={"#d3d3d3"}
-              placeholder="Email"
-            />
+          <View style={{ gap: 12, width: "100%", marginVertical: 12 }}>
+            <View style={{ width: "100%" }}>
+              <TextInput
+                style={{
+                  borderColor: "yellow",
+                  borderWidth: 1,
+                  width: "100%",
+                  padding: 12,
+                }}
+                placeholderTextColor={"#d3d3d3"}
+                placeholder="Email"
+              />
+            </View>
+            <View style={{ width: "100%" }}>
+              <TextInput
+                style={{
+                  borderColor: "yellow",
+                  borderWidth: 1,
+                  width: "100%",
+                  padding: 12,
+                }}
+                placeholder="Password"
+                placeholderTextColor={"#d3d3d3"}
+              />
+            </View>
           </View>
-          <View style={{ width: "100%" }}>
-            <TextInput
+          <Link asChild href={"/(tabs)/"} style={{ width: "100%" }}>
+            <TouchableOpacity
+              onPress={() => router.push("/(tabs)/")}
               style={{
-                borderColor: "yellow",
-                borderWidth: 1,
+                backgroundColor: "yellow",
                 width: "100%",
-                padding: 12,
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 16,
               }}
-              placeholder="Password"
-              placeholderTextColor={"#d3d3d3"}
-            />
-          </View>
-          <Link asChild href={"/(tabs)/"}>
-            <TouchableOpacity>
-              <Text style={{ color: "white", fontFamily: "sans" }}>Login</Text>
+            >
+              <Text
+                style={{
+                  color: "black",
+                  fontFamily: "sans",
+                }}
+              >
+                Login
+              </Text>
             </TouchableOpacity>
+          </Link>
+          <Link
+            href={"/(auth)/register"}
+            asChild
+            style={{ marginVertical: 24 }}
+          >
+            <Text style={{ color: "white" }}>
+              Don't have an account? Register
+            </Text>
           </Link>
         </ScrollView>
       </KeyboardAvoidingView>

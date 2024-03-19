@@ -1,12 +1,129 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { Link, useRouter } from "expo-router";
+import { useEffect, useRef, useState } from "react";
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Register = () => {
-  return (
-    <View>
-      <Text>Register</Text>
-    </View>
-  )
-}
+  const router=useRouter();
+  const scrollRef = useRef<ScrollView | null>(null);
 
-export default Register
+  const keyBoardDidShow = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ y: 220, animated: true });
+    }
+  };
+
+  const keyBoardDidHide = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ y: 0, animated: true });
+    }
+  };
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      "keyboardDidShow",
+      keyBoardDidShow
+    );
+    const keyboardDidHideListener = Keyboard.addListener(
+      "keyboardDidHide",
+      keyBoardDidHide
+    );
+
+    return () => {
+      keyboardDidShowListener.remove();
+      keyboardDidHideListener.remove();
+    };
+  }, []);
+  return (
+    <SafeAreaView style={{ flex: 1, paddingHorizontal: 12 }}>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={{ flex: 1 }}
+        contentContainerStyle={{
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <ScrollView
+          ref={scrollRef}
+          contentContainerStyle={{
+            flexGrow: 1,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          bounces={false}
+        >
+          <Text style={{ fontFamily: "sans", fontSize: 28, color: "yellow" }}>
+            Let's Get You Signed Up!
+          </Text>
+          <Text style={{ fontFamily: "sans", color: "#d3d3d3" }}>
+            Enter your information below
+          </Text>
+          <View style={{ gap: 12, width: "100%", marginVertical: 12 }}>
+            <View style={{ width: "100%" }}>
+              <TextInput
+                style={{
+                  borderColor: "yellow",
+                  borderWidth: 1,
+                  width: "100%",
+                  padding: 12,
+                }}
+                placeholderTextColor={"#d3d3d3"}
+                placeholder="Email"
+              />
+            </View>
+            <View style={{ width: "100%" }}>
+              <TextInput
+                style={{
+                  borderColor: "yellow",
+                  borderWidth: 1,
+                  width: "100%",
+                  padding: 12,
+                }}
+                placeholder="Password"
+                placeholderTextColor={"#d3d3d3"}
+              />
+            </View>
+          </View>
+          <Link asChild href={"/(tabs)/"} style={{ width: "100%" }}>
+            <TouchableOpacity
+              onPress={() => router.push("/(tabs)/")}
+              style={{
+                backgroundColor: "yellow",
+                width: "100%",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 16,
+              }}
+            >
+              <Text
+                style={{
+                  color: "black",
+                  fontFamily: "sans",
+                }}
+              >
+                Register
+              </Text>
+            </TouchableOpacity>
+          </Link>
+          <Link href={"/(auth)/"} asChild style={{ marginVertical: 24 }}>
+            <Text style={{ color: "white" }}>
+              Already have an account? Login
+            </Text>
+          </Link>
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
+  );
+};
+
+export default Register;
