@@ -113,7 +113,7 @@ const Login = () => {
               </Text>
             </TouchableOpacity>
           </Link>
-          <Link href={"/(auth)/"} asChild>
+          <Link href={"/(auth)/"} asChild style={{ marginVertical: 24 }}>
             <Text style={{ color: "white" }}>
               Don't have an account? Register
             </Text>
