@@ -27,7 +27,7 @@ const Profile = () => {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.userInfoItems}>
+      <View style={styles.userInfoItems2}>
         <TouchableOpacity style={styles.iconContainer}>
           <FontAwesome name="phone" size={20} color="black" />
         </TouchableOpacity>
@@ -42,25 +42,26 @@ const Profile = () => {
         <Text style={styles.balanceAmount}>$100.00</Text>
       </View>
 
-      <View style={styles.userInfoItem}>
-        <Text>Speciality</Text>
-        <Text style={{ color: "gray", marginTop: 4 }}>Engineer</Text>
-      </View>
-      <View style={styles.userInfoItem}>
-        <Text>Born</Text>
-        <Text style={{ color: "gray", marginTop: 4 }}>1 July, 2015</Text>
-      </View>
-      <View style={styles.userInfoItem}>
-        <Text>Height</Text>
-        <Text style={{ color: "gray", marginTop: 4 }}>162cm</Text>
-      </View>
-
-      <View>
-        <Text>Favorites</Text>
-        <Text>Payments</Text>
-        <Text>Referral Code</Text>
-        <Text>Promotions</Text>
-        <Text>Settings</Text>
+      <View
+        style={{
+          width: "100%",
+          flexDirection: "row",
+          padding: 5,
+          justifyContent: "space-between",
+        }}
+      >
+        <View>
+          <Text>Speciality</Text>
+          <Text style={{ color: "gray", marginTop: 4 }}>Engineer</Text>
+        </View>
+        <View>
+          <Text>Born</Text>
+          <Text style={{ color: "gray", marginTop: 4 }}>1 July, 2015</Text>
+        </View>
+        <View>
+          <Text>Height</Text>
+          <Text style={{ color: "gray", marginTop: 4 }}>162cm</Text>
+        </View>
       </View>
     </View>
   );
@@ -106,6 +107,13 @@ const styles = StyleSheet.create({
   userInfoItems: {
     flexDirection: "row",
     alignItems: "center",
+    paddingTop: 4,
+  },
+
+  userInfoItems2: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingTop: 10,
   },
   iconContainer: {
     paddingHorizontal: 5,
@@ -126,14 +134,6 @@ const styles = StyleSheet.create({
   balanceAmount: {
     marginLeft: 5,
   },
-  // editButton: {
-  //   position: "absolute",
-  //   top: 10,
-  //   right: 10,
-  //   backgroundColor: "#333",
-  //   padding: 5,
-  //   borderRadius: 50,
-  // },
 });
 
 export default Profile;
